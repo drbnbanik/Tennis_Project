@@ -1,0 +1,69 @@
+#These are the name of the attributes and theor brief descriptions used to build the model
+
+1. Tournament_name
+2. Year
+3. Team1_player1
+4. Team1_player2
+5. Team2_player1
+6. Team2_player2
+
+7. Diff_player_count_playing_together = (#Team2_players with whom Team1 players played together in past - #Team1_players with whom Team2 players played together in past) , this can take only the values -1, 0, 1
+
+8. Sum_match_count_playing_together = #matches Team1 players have played with Team2 players together in past. = #matches Team2 players have played with Team1 players together in past , this is symmetric variable
+
+9. Interaction_together = (Diff_player_count_playing_together) x (Sum_match_count_playing_together)
+
+10. Diff_player_count_playing_against = (#Team2_players with whom Team1 players played against in past - #Team1_players with whom Team2 players played against in past) , this can take only the values -1, 0, 1
+
+11. Sum_match_count_playing_against = #matches Team1 players have played with Team2 players against in past. = #matches Team2 players have played with Team1 players against in past, this is symmetric variable
+
+12. Interaction_against = (Diff_player_count_playing_against) x (Sum_match_count_playing_against)
+
+13. delta_Sum_height = (total height of Team1 players - total height of Team2 players)
+
+14. delta_Diff_height = (difference in height of Team1 players - Difference in height of Team2 players)
+
+15. delta_Sum_weight = (total weight of Team1 players - total weight of Team2 players)
+
+16. delta_Diff_weight = (difference in weight of Team1 players - Difference in weight of Team2 players)
+
+17. delta_atleast_one_left_hand = (atleast_one_left_hand score for Team1 - atleast_one_left_hand score for Team2), this can take only the values -1,0,1
+
+18. delta_is_same_country = (is_same_country score for Team1 - is_same_country score for Team2), this can take only the values -1,0,1
+
+
+19. delta_tot_past_wins_individual = (sum of Team1's players individual wins in past - sum of Team2's players individual wins in past)
+
+20. delta_tot_past_claycourt_wins_individual = (sum of Team1's players individual clay-court wins in past - sum of Team2's players individual clay-court wins in past)
+
+21. delta_tot_past_grasscourt_wins_individual = (sum of Team1's players individual grass-court wins in past - sum of Team2's players individual grass-court wins in past)
+
+22. delta_tot_past_hardcourt_wins_individual = (sum of Team1's players individual hard-court wins in past - sum of Team2's players individual hard-court wins in past)
+
+23. delta_max_recentness = (the most recent individual win score from the 2 players in Team1 - the most recent individual win score from the 2 players in Team2), 
+recentness is calculated as (year of win - 1989)
+
+24. delta_tot_last_year_clay_win = (sum of Team1's players individual clay-court wins in previous year - sum of Team2's players individual clay-court wins in previous year)
+
+25. delta_tot_last_year_grass_win = (sum of Team1's players individual grass-court wins in previous year - sum of Team2's players individual grass-court wins in previous year)
+
+26. delta_tot_last_year_hard_win = (sum of Team1's players individual hard-court wins in previous year - sum of Team2's players individual hard-court wins in previous year)
+
+27. delta_tot_current_year_grandslam_wins = (sum of Team1's players individual wins in previous grand-slams of the same year - sum of Team2's players individual wins in previous grand-slams of the same year )
+
+28. delta_games_played_in_past_together = (#matches Team1 players have played together in the past - #matches Team2 players have played together in the past)
+
+29. delta_games_won_in_past_together = (#matches Team1 players have won together in the past - #matches Team2 players have won together in the past)
+
+30. delta_win_rate = (win rate of Team1 players together in past - win rate of Team2 players together in past)
+
+31. delta_max_recent_together = (Most recent win score of Team1 players together - Most recent win score of Team2 players together)
+
+32. Grass_Court = Dummy variable for Grass court. Takes value = 1 when it is grass court, otherwise 0
+
+33. Hard_Court = Dummy variable for Hard court. Takes value = 1 when hard court, otherwise 0
+**There is no Clay_Court variable since it is taken as base case. Clay_Court is represented as (Grass_Court = 0 and Hard_Court = 0)
+
+34. Team1_win = Whether Team1 won the match or not. Takes value = 1 if won, 0 if lost
+
+
